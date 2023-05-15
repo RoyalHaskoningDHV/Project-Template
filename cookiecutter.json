@@ -1,0 +1,12 @@
+{
+    "full_name": "DDC Person",
+    "reviewer_1": "Someone Else",
+    "reviewer_2": "",
+    "email": "info@example.com",
+    "language": "python",
+    "repo_name": "Hello world",
+    "project_short_description": "Data Science",
+    "pkg_name": "not applicable",
+    "documentation": "y",
+    "version": "0.1.0"
+}
