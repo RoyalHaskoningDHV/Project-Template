@@ -55,10 +55,3 @@ if __name__ == "__main__":
         print("Removing documentation files...")
         remove_file_folder(Path("docs") / "source")
         remove_file_folder(Path("docs") / "build")
-    else:
-        print(
-            "For information on how to create documentation, please see the Digital wiki:"
-        )
-        print(
-            "https://wikiddc.corporateroot.net/doku.php?id=python_styleguide#documentation"
-        )
