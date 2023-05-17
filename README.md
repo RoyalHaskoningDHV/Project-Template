@@ -14,7 +14,7 @@ Then run the cookiecutter command in the parent folder of where you want your
 new project
 
 ```
-cookiecutter https:///Project_Templates
+cookiecutter https://github.com/RoyalHaskoningDHV/Project-Template.git
 ```
 
 Then cookiecutter will ask a series of questions to determine which files to use
@@ -91,8 +91,8 @@ After running the cookiecutter, your code should look like below
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt` (if in a hurry, not included here)
     |
-    ├── setup.cfg          <- sets standard linting options of RHDHV Data Solutions (called by setup.py)
+    ├── setup.cfg          <- sets standard linting options used by setup.py
     |
     └── setup.py           <- makes project pip installable (pip install -e .) so package can be imported
-                              Add the necessary dependencies here as well! Only for python language.
+                              Add the necessary dependencies here as well! Only for python language
 ```
