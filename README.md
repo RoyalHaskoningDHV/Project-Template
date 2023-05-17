@@ -1,6 +1,9 @@
 # Cookiecutter template for data science
 
 This is a cookiecutter template that is shared publicly by Royal Haskoning DHV.
+It is used internally for quickly setting up Data Science projects. There is a 
+
+The template is based on [https://github.com/drivendata/cookiecutter-data-science/tree/master](https://github.com/drivendata/cookiecutter-data-science/tree/master).
 
 ## Usage
 
