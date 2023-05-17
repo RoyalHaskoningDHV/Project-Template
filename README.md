@@ -3,6 +3,8 @@
 This project contains a cookiecutter template to use for all BL Digital projects.
 It currently contains templates for Python and for R.
 
+The template is based on [https://github.com/drivendata/cookiecutter-data-science/tree/master](https://github.com/drivendata/cookiecutter-data-science/tree/master).
+
 Author: Ruben Peters
 Email: ruben.peters@rhdhv.com
 
