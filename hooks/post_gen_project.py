@@ -48,17 +48,8 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.documentation}}" != "y" or language == "r":
         if language == "r":
-            print(
-                "The RHDHV DDC cookiecutter part for automatic documentation in R is currently "
-                "not supported."
-            )
+            print("Automatic documentation for R is not supported.")
+
         print("Removing documentation files...")
         remove_file_folder(Path("docs") / "source")
         remove_file_folder(Path("docs") / "build")
-    else:
-        print(
-            "For information on how to create documentation, please see the Digital wiki:"
-        )
-        print(
-            "https://wikiddc.corporateroot.net/doku.php?id=python_styleguide#documentation"
-        )

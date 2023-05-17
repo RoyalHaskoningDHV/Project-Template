@@ -1,41 +1,30 @@
-# Cookiecutter template for projects
+# Cookiecutter template for data science
 
-This project contains a cookiecutter template to use for all BL Digital projects.
-It currently contains templates for Python and for R.
+This is a cookiecutter template that is shared publicly by Royal Haskoning DHV.
+It is used internally for quickly setting up Data Science projects. There is a 
 
 The template is based on [https://github.com/drivendata/cookiecutter-data-science/tree/master](https://github.com/drivendata/cookiecutter-data-science/tree/master).
 
-Author: Ruben Peters
-Email: ruben.peters@rhdhv.com
+## Usage
 
-# Usage
-
-To use the cookiecutter template, first install cookiecutter:
+To use the cookiecutter template, first install cookiecutter
 
 ```
 pip install cookiecutter
 ```
 
-Then run the cookiecutter command in the parent folder of the new project (usually `/home/user/Python/`):
+Then run the cookiecutter command in the parent folder of where you want your
+new project
 
 ```
-cookiecutter https://corporateroot@dev.azure.com/corporateroot/Project%20Templates/_git/Project_Templates
+cookiecutter https://github.com/RoyalHaskoningDHV/Project-Template.git
 ```
 
-or if you use SSH keys for DevOps:
+Then cookiecutter will ask a series of questions to determine which files to use
+and values to include in the `README.md`, `setup.py` etcetera. When you've
+answered all questions, cookiecutter will generate the entire folder structure.
 
-```
-cookiecutter git@ssh.dev.azure.com:v3/corporateroot/Project%20Templates/Project_Templates
-```
-
-If this fails with `cookiecutter.exceptions.UnknownRepoType`, you can clone the repo and run cookiecutter locally:
-
-```
-git clone git@ssh.dev.azure.com:v3/corporateroot/Project%20Templates/Project_Templates
-cookiecutter Project_Templates/
-```
-
-Then cookiecutter will ask a series of questions to determine which files to use and values to include in the README, setup.py etc. When you've answered all questions, cookiecutter will generate the entire folder structure. The last step is to initialize git and send the template as initial commit:
+The last step is to initialize git and send the template as initial commit.
 
 ```
 git init
@@ -45,18 +34,17 @@ git remote add origin <server>
 git push origin main
 ```
 
-# Setting up DevOps pipelines
+## DevOps pipelines
 
-The cookiecutter template will also generate some DevOps pipelines you can use for linting, unit tests and building your Python package. 
+The cookiecutter template includes three DevOps pipelines, included in
+`pipelines/`. These templates are predefined setups for linting, building the
+package and running unittests.
 
-For more information on setting up linting and unit test pipelines, see: https://wikiddc.corporateroot.net/doku.php?id=python_linting_and_unit_tests_in_devops_pipelines
+## Project structure
 
-For more information on publising your Python code as Python package see: https://wikiddc.corporateroot.net/doku.php?id=publish_and_use_python_packages_in_azure_devops
+After running the cookiecutter, your code should look like below
 
-# Project structure
-
-After running the cookiecutter, your code should look like this:
-
+```
     ├── {{cookiecutter.pkg_name}}  <- Source code for use in this project (for python or 'src' when using R or not using a package)
     │   ├── __init__.py            <- Makes cto a Python module
     │   │
@@ -106,7 +94,8 @@ After running the cookiecutter, your code should look like this:
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt` (if in a hurry, not included here)
     |
-    ├── setup.cfg          <- sets standard linting options of RHDHV Data Solutions (called by setup.py)
+    ├── setup.cfg          <- sets standard linting options used by setup.py
     |
     └── setup.py           <- makes project pip installable (pip install -e .) so package can be imported
-                              Add the necessary dependencies here as well! Only for python language.
+                              Add the necessary dependencies here as well! Only for python language
+```
